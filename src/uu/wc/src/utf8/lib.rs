@@ -1,6 +1,5 @@
 mod lossy;
 mod read;
-mod word_count;
 
 pub use lossy::LossyDecoder;
 pub use read::{BufReadDecoder, BufReadDecoderError};

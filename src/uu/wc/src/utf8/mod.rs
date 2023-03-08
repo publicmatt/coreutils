@@ -9,6 +9,15 @@ use std::error::Error;
 use std::fmt;
 use std::str;
 
+///
+/// Incremental, zero-copy UTF-8 decoding with error handling
+///
+/// The original implemention was written by Simon Sapin in the utf-8 crate (https://crates.io/crates/utf-8).
+/// uu_wc used to depend on that crate.
+/// The author archived the repository (https://github.com/SimonSapin/rust-utf8).
+/// They suggested incorporating the source directly into uu_wc (https://github.com/uutils/coreutils/issues/4289).
+///
+
 /// The replacement character, U+FFFD. In lossy decoding, insert it for every decoding error.
 pub const REPLACEMENT_CHARACTER: &'static str = "\u{FFFD}";
 
